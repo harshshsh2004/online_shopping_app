@@ -43,7 +43,7 @@ pipeline {
                 sh "docker rm -f $CONTAINER_NAME || true"
 
                 echo "Running new Docker container..."
-                sh "docker run -d --name $CONTAINER_NAME -p 5000:5000 $IMAGE_NAME"
+                sh "docker run -d --name $CONTAINER_NAME -p 81:80 $IMAGE_NAME"
             }
         }
     }
